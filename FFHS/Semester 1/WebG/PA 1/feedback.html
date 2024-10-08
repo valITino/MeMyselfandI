@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+<header>
+    <h1>Super Store</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="cart.html">Cart</a>
+            </li>
+            <li>
+                <a href="feedback.html">Feedback</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<h2>Feedback</h2>
+
+<form>
+    <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Vollständiger Name" required>
+    </fieldset>
+
+    <fieldset>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="beispiel@mustermail.com" required>
+    </fieldset>
+
+    <fieldset>
+        <label for="rating-design">Bewertung des Designs:</label>
+        <input id="rating-design" type="range" min="1" max="100" value="50">
+    </fieldset>
+
+    <fieldset>
+        <label for="rating-component">Bewertung der Komponente:</label>
+        <input id="rating-component" type="range" min="1" max="100" value="50">
+    </fieldset>
+
+    <fieldset>
+        <label for="feedback">Kommentar:</label>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Gib ein Kommentar ab hier..."
+                  required></textarea>
+    </fieldset>
+
+    <button>Jetzt senden</button>
+</form>
+
+<footer>
+    (c) Super Store
+</footer>
+
+</body>
+</html>
