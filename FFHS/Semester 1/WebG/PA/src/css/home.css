@@ -1,0 +1,27 @@
+
+
+
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 500px));
+}
+
+article {
+    background-color: dodgerblue;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+}
+
+article h2 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.price {
+    background-color: beige;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UML 2.0 Activity Diagram - Sieve of Eratosthenes</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+<h1>Sieve of Eratosthenes - Optimized UML 2.0 Activity Diagram</h1>
+<div class="mermaid">
+    graph TD;
+    A["Start"] --> B["Input number n (upper limit for primes)"];
+    B --> C["Create a list of True values for numbers 0 to n"];
+    C --> D["Mark 0 and 1 as False (not prime)"];
+    D --> E["Set p = 2 (starting with the smallest prime number)"];
+    E --> F{"Is p * p <= n?"};
+    F -- Yes --> G{"Is primes[p] True?"};
+    G -- Yes --> H["Mark all multiples of p as False starting from p * p"];
+    H --> I["Increase p by 1"];
+    G -- No --> I;
+    I --> F;
+    F -- No --> J["Collect all numbers still marked as True (these are the primes)"];
+    J --> K["Return list of prime numbers"];
+    K --> L["End"];
+</div>
+</body>
+</html>
