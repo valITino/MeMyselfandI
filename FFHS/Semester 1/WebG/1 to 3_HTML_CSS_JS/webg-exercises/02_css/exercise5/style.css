@@ -1,0 +1,55 @@
+#myList1 {
+
+}
+
+#myDiv3 {
+
+}
+
+#myParagraph2 {
+
+}
+
+.myDiv1 {
+    color: yellow;
+}
+
+.myDiv2 {
+    color: red;
+}
+
+.myDiv3 {
+    background-color: blue;
+}
+
+.myDiv4 {
+    background-color: orange;
+}
+
+.myList {
+    font-size: 100px;
+}
+
+.myListItem {
+    font-size: 20px;
+}
+
+.myParagraph1 {
+    font-weight: 900;
+}
+
+.myParagraph2 {
+    text-align: center;
+}
+
+div {
+    border-style: solid;
+}
+
+p {
+    text-decoration: underline;
+}
+
+li {
+    background-color: brown;
+}

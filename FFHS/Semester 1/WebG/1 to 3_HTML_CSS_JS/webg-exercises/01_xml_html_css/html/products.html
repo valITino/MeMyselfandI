@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Unsere Produkte</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<!--Erstelle eine HTML-Seite namens products.html.-->
+<!--Im <header>, füge den Titel „Unsere Produkte“ hinzu.-->
+<!--    Erstelle eine Tabelle (<table>) mit einer Liste von mindestens fünf Produkten. Die Tabelle sollte folgende Spalten enthalten:-->
+<!--        Produktname-->
+<!--        Bild (mit <img>-Tags)-->
+<!--        Preis-->
+<!--        Beschreibung-->
+<!--        In den Warenkorb (ein Button in jeder Zeile)-->
+<!--        Füge ein Bestellformular unter der Tabelle hinzu. Das Formular sollte Felder für Name, Adresse, Produktwahl (als Dropdown), Menge und eine Bestellnotiz enthalten.-->
+<!--        Verwende <fieldset> und <legend>, um das Formular logisch zu gruppieren.-->
+<!--            Stelle sicher, dass das Formular eine grundlegende Validierung verwendet (z.B. required und passende type-Attribute).-->
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Produktname</th>
+            <th>Bild</th>
+            <th>Preis</th>
+            <th>Beschreibung</th>
+            <th>Kaufen</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>i7 7700k</td>
+            <td><img src="assets/processeur-intel-i7-7700k.avif"/></td>
+            <td>200</td>
+            <td>Cpu</td>
+            <td>
+                <button>In den Warenkorb</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>RTX 4070</td>
+            <td><img src="assets/gpu.webp"/></td>
+            <td>600</td>
+            <td>Gpu</td>
+            <td>
+                <button>In den Warenkorb</button>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>Laptop 100</td>
+            <td><img src="assets/laptop.avif"/></td>
+            <td>800</td>
+            <td>Super schneller laptop</td>
+            <td>
+                <button>In den Warenkorb</button>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>iPhone 21</td>
+            <td><img src="assets/iphone.webp"/></td>
+            <td>1200</td>
+            <td>Handy</td>
+            <td>
+                <button>In den Warenkorb</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Epson 200</td>
+            <td><img src="assets/beamer.webp"/></td>
+            <td>400</td>
+            <td>Beamer</td>
+            <td>
+                <button>In den Warenkorb</button>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <form method="get">
+        <fieldset>
+            <legend>Bestellformular:</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="strasse">Strasse:</label>
+            <input type="text" id="strasse" name="strasse">
+
+            <label for="ort">Ort:</label>
+            <input type="text" id="ort" name="ort">
+
+            <label for="produktwahl">Produktwahl:</label>
+            <select id="produktwahl" name="produktwahl">
+                <option value="i7 7700k">i7 7700k</option>
+                <option value="RTX 4070">RTX 4070</option>
+                <option value="Laptop 100">Laptop 100</option>
+                <option value="iPhone 21">iPhone 21</option>
+                <option value="Epson 200">Epson 200</option>
+            </select>
+
+            <label for="menge">Menge:</label>
+            <input type="number" id="menge" name="menge">
+
+            <label for="bestellnotiz">Bestellnotiz:</label>
+            <textarea id="bestellnotiz" name="bestellnotiz"></textarea>
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+</div>
+</body>
+</html>

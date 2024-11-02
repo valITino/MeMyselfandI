@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<recipes xmlns="recipes-schema.xsd">
+    <recipe>
+        <name>kuchen</name>
+        <ingredients>
+            <ingredient>
+                <name>Schoggi</name>
+                <amount unit="g">2000</amount>
+            </ingredient>
+        </ingredients>
+        <instruction>
+            Man nehme die schoggi...
+        </instruction>
+        <time>10</time>
+    </recipe>
+</recipes>

@@ -1,0 +1,23 @@
+div {
+    background-color: orange;
+}
+
+.myDiv {
+    color: green;
+}
+
+#myDiv {
+    color: blue;
+}
+
+#myId {
+    color: pink;
+}
+
+p {
+    background-color: yellow;
+}
+
+span {
+    font-size: 20px;
+}

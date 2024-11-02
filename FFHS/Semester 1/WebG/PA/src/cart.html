@@ -8,19 +8,14 @@
     <title>Cart</title>
 </head>
 <body>
-<header>
-    <h1>Super Store</h1>
+<header class="header">
+    <h1 class="title">Super Store</h1>
     <nav>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="cart.html">Cart</a>
-            </li>
-            <li>
-                <a href="feedback.html">Feedback</a>
-            </li>
+        <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
+        <ul class="nav-list" id="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+            <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
         </ul>
     </nav>
 </header>

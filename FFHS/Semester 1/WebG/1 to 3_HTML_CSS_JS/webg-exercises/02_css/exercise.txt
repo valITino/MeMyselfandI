@@ -1,0 +1,26 @@
+Aufgabe 1:
+
+    Erstelle eine HTML-Datei mit einem Absatz, der mithilfe einer Klasse und einem Inline-Style formatiert wird.
+    Verwende sowohl eine Klasse als auch einen Inline-Style, um die Farbe des Textes zu ändern.
+    Die Klasse soll die Textfarbe auf Blau setzen, während der Inline-Style die Textfarbe auf Rot setzt.
+
+Aufgabe 2:
+
+    Erstelle eine HTML-Datei mit einem Absatz, der mithilfe eines Klassen- und eines ID-Selektors formatiert wird.
+    Setze in der Klasse die Hintergrundfarbe auf Gelb und im ID-Selektor auf Grün.
+
+Aufgabe 3:
+
+    Erstelle eine HTML-Datei mit einem Absatz und einer Überschrift.
+    Weise der Überschrift eine Klasse zu, die die Textfarbe auf Blau setzt, und verwende zusätzlich ein universelles Selektor-Style (*), um die Textfarbe auf Rot zu setzen.
+    Verwende in einer weiteren CSS-Regel das Schlüsselwort !important, um die Farbe auf Schwarz zu setzen.
+
+Aufgabe 4:
+
+    Erstelle eine HTML-Datei mit einer verschachtelten Struktur aus einem div, in dem sich ein Absatz (<p>) und ein span befinden.
+    Weise mithilfe verschiedener Selektoren (Klassen, Typen, Nachfahrenselektoren) unterschiedliche Formatierungen zu und beobachte die Präzedenzregeln.
+
+Aufgabe 5:
+
+    Erstelle eine HTML-Seite mit mehreren verschachtelten div-Elementen, Absätzen und einer Liste.
+    Definiere mehrere CSS-Regeln mit unterschiedlicher Spezifität (z. B. verschachtelte Selektoren, IDs, Klassen) und finde heraus, welcher Stil sich durchsetzt.

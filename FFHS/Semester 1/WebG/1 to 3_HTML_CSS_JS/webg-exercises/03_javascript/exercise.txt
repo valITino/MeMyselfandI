@@ -1,0 +1,64 @@
+Aufgabe 1: Schachbrett als Zeichenkette darstellen
+
+    Dauer: 20 Minuten
+    Ziel: Erstellen eines 8x8 Schachbretts als Textausgabe, um Schleifen und bedingte Anweisungen zu üben.
+
+    Erstelle eine Datei aufgabe1.js.
+    Schreibe eine Funktion generateChessboard, die ein 8x8 Schachbrett als Zeichenkette erzeugt und zurückgibt.
+    Verwende zwei verschachtelte Schleifen, um das Muster zu erstellen. Wechsel zwischen "⬛" und "⬜" für die Quadrate.
+    Das Schachbrett soll Zeile für Zeile generiert werden, sodass die Ausgabe wie ein echtes Schachbrett aussieht.
+
+Aufgabe 2: Wörter zählen in einem Text
+
+    Dauer: 20 Minuten
+    Ziel: Die Arbeit mit Zeichenketten und Arrays üben, sowie das Erstellen einer Funktion.
+
+    Erstelle eine Datei aufgabe2.js.
+    Schreibe eine Funktion countWords, die einen Text (String) als Parameter entgegennimmt und die Anzahl der Wörter im Text zurückgibt.
+    Verwende die Methode .split(" "), um den Text in ein Array von Wörtern zu unterteilen.
+    Die Funktion soll die Länge des Arrays zurückgeben, um die Anzahl der Wörter zu ermitteln.
+
+Aufgabe 3: FizzBuzz mit erweiterten Regeln
+
+    Dauer: 15 Minuten
+    Ziel: Üben von Schleifen und Bedingungen in JavaScript.
+
+    Erstelle eine Datei aufgabe3.js.
+    Schreibe eine Funktion fizzBuzz, die alle Zahlen von 1 bis 50 durchläuft.
+    Für jede Zahl gelten folgende Regeln:
+        Ist die Zahl durch 3 teilbar, soll „Fizz“ ausgegeben werden.
+        Ist die Zahl durch 5 teilbar, soll „Buzz“ ausgegeben werden.
+        Ist die Zahl durch 3 und 5 teilbar, soll „FizzBuzz“ ausgegeben werden.
+        Ist die Zahl durch 7 teilbar, soll „Bazz“ ausgegeben werden.
+        Für alle anderen Zahlen wird einfach die Zahl ausgegeben.
+    Teste die Funktion, indem du fizzBuzz() aufrufst und das Ergebnis in der Konsole ausgibst.
+
+Aufgabe 5: Schachbrett mit HTML und JavaScript erzeugen
+
+    Dauer: 20 Minuten
+    Ziel: Erstellen eines einfachen Schachbretts mit HTML und JavaScript, um die DOM-Manipulation zu üben.
+
+    Erstelle eine Datei aufgabe5.html und füge das grundlegende HTML-Grundgerüst ein.
+    Erstelle ein <div> mit der ID chessboard im HTML-Bereich, in dem das Schachbrett dargestellt wird.
+    Füge ein <script>-Tag hinzu und schreibe JavaScript-Code, der ein 8x8 Schachbrett erzeugt.
+    Nutze Schleifen, um die 64 Felder des Schachbretts zu erstellen und abwechselnd schwarze und weiße Quadrate (z. B. als div-Elemente) einzufügen.
+    Verwende CSS im <style>-Tag oder in einem separaten CSS-File, um jedes Quadrat gleich groß zu machen und farblich abzuwechseln.
+
+Aufgabe 6: Eingabefeld zur Berechnung des BMI mit HTML und JavaScript
+
+    Dauer: 15 Minuten
+    Ziel: Üben des Zugriffs auf Benutzer-Eingaben und der Berechnung sowie Ausgabe in HTML.
+
+    Erstelle eine Datei aufgabe6.html und füge das grundlegende HTML-Grundgerüst ein.
+    Erstelle ein Formular mit zwei Eingabefeldern: eines für das Gewicht und eines für die Größe.
+    Füge einen Button hinzu, der die BMI-Berechnung auslöst.
+    Schreibe JavaScript, das die Werte aus den Eingabefeldern liest, den BMI berechnet und das Ergebnis in einer div-Ausgabe anzeigt.
+
+Aufgabe 7: Einfacher Taschenrechner mit HTML und JavaScript
+
+    Dauer: 15 Minuten
+    Ziel: Verständnis der DOM-Manipulation und Grundrechenarten in JavaScript üben.
+
+    Erstelle eine Datei aufgabe7.html und füge das HTML-Grundgerüst hinzu.
+    Erstelle ein Formular mit zwei Eingabefeldern für die Zahlen und vier Buttons für die Grundrechenarten: Addition, Subtraktion, Multiplikation und Division.
+    Schreibe JavaScript, das den Wert der ausgewählten Rechenart berechnet und das Ergebnis in einer div-Ausgabe anzeigt.

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<movies xmlns="movies-schema.xsd">
+    <movie>
+        <title>Star Wars</title>
+        <regisseur>Tomas</regisseur>
+        <genre>SciFi</genre>
+        <releaseDate>1900</releaseDate>
+        <length unit="hours">10</length>
+    </movie>
+    <movie>
+        <title>Star Wars</title>
+        <regisseur>Tomas</regisseur>
+        <genre>SciFi</genre>
+        <releaseDate>1900</releaseDate>
+        <length unit="milliseconds">10</length>
+    </movie>
+</movies>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<students xmlns="students-schema.xsd">
+    <student>
+        <name>Tomas</name>
+        <matrikelnummer>0202020</matrikelnummer>
+        <studiengang>it</studiengang>
+        <email>tomas@ffhs.ch</email>
+        <semester>1</semester>
+    </student>
+
+    <student>
+        <name>Tomas2</name>
+        <matrikelnummer>0202020</matrikelnummer>
+        <studiengang>it</studiengang>
+        <email>tomas@ffhs.ch</email>
+        <semester>1</semester>
+    </student>
+</students>
+
