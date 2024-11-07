@@ -7,13 +7,15 @@
 .category-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     overflow: scroll;
 }
 
 section {
     display: grid;
-    margin: 2em 0;
     gap: 2em;
+    max-width: 768px;
+    margin: 2em auto;
 }
 
 .product-container {
@@ -44,11 +46,10 @@ section {
     width: min-content;
 }
 
-.product-price{
+.product-price {
     grid-area: price;
     justify-self: end;
 }
-
 
 .product-cart {
     grid-area: cart;
@@ -60,7 +61,7 @@ section {
     display: none;
 }
 
-@media (width <= 768px) {
+@media (width >= 768px) {
     .grid {
         grid-template-columns: 1fr 1fr;
     }
