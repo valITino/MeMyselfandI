@@ -1,0 +1,93 @@
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+#testimonial-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Testimonial card styling */
+.testimonial-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* 3 cards per row */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 2px solid #006680;
+}
+
+.testimonial-name {
+    font-size: 18px;
+    color: #006680;
+    margin: 0;
+}
+
+.testimonial-company {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 15px;
+}
+
+.testimonial-quote {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.testimonial-likes {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #testimonial-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        width: 90%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .testimonial-card {
+        width: calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+footer {
+    background-color: #006680;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

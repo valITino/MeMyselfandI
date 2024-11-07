@@ -11,54 +11,64 @@
 <header class="header">
     <h1 class="title">Super Store</h1>
     <nav>
-        <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
         <ul class="nav-list" id="nav-list">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
             <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+            <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="weitereprodukte.html">Mehr Produkte</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-
     <h2>Feedback</h2>
 
     <form>
         <fieldset>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Vollständiger Name" required>
+            <input type="text" id="name" name="name" placeholder="Vollständiger Name" required aria-describedby="name-error">
+            <small id="name-error" class="error-message"></small>
         </fieldset>
 
         <fieldset>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="beispiel@mustermail.com" required>
+            <input type="email" id="email" name="email" placeholder="beispiel@mustermail.com" required aria-describedby="email-error">
+            <small id="email-error" class="error-message"></small>
         </fieldset>
 
         <fieldset>
             <label for="rating-design">Bewertung des Designs:</label>
-            <input id="rating-design" type="range" min="1" max="100" value="50">
+            <input id="rating-design" type="range" min="1" max="10" value="5" aria-label="Bewertung des Designs">
+            <small id="rating-design-error" class="error-message"></small>
         </fieldset>
 
         <fieldset>
             <label for="rating-component">Bewertung der Komponente:</label>
-            <input id="rating-component" type="range" min="1" max="100" value="50">
+            <input id="rating-component" type="range" min="1" max="10" value="5" aria-label="Bewertung der Komponente">
+            <small id="rating-component-error" class="error-message"></small>
         </fieldset>
 
         <fieldset>
             <label for="feedback">Kommentar:</label>
-            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Gib ein Kommentar ab hier..."
-                      required></textarea>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Gib ein Kommentar ab hier..."></textarea>
         </fieldset>
 
-        <button>Jetzt senden</button>
+        <button id="jetztsenden" type="button">Jetzt senden</button>
     </form>
-
 </main>
+
+<div id="feedback-popup" class="popup hidden">
+    <div id="popup-content">
+        <p id="popup-message" aria-live="polite"></p> <!-- Placeholder for dynamic message -->
+        <button id="popup-close">Schliessen</button>
+    </div>
+</div>
+
 <footer>
     (c) Super Store
 </footer>
 
-<script src="js/menu.js"></script>
+<script src="js/feedback.js"></script>
 </body>
 </html>
