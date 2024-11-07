@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Tool</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+
+<header style="background-color: #006680; color: white; padding: 20px; text-align: center;">
+  <h1 style="margin: 0;">Validation Tool</h1>
+</header>
+
+<main style="padding: 20px; max-width: 600px; margin: 20px auto; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <!-- Input Section -->
+  <section style="margin-bottom: 20px;">
+    <label for="inputField" style="display: block; margin-bottom: 5px; font-weight: bold;">Input:</label>
+    <input type="text" id="inputField" placeholder="Geben Sie etwas ein"
+           style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px;">
+  </section>
+
+  <!-- Validation Dropdown -->
+  <section style="margin-bottom: 20px;">
+    <label for="validationDropdown" style="display: block; margin-bottom: 5px; font-weight: bold;">Validation:</label>
+    <select id="validationDropdown"
+            style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px;">
+      <option value="filled">Ausgefüllt</option>
+      <option value="numeric">Numerisch</option>
+      <option value="length">Zwischen 10 und 20 Zeichen</option>
+      <option value="contains">Enthält "X", "3" und "$"</option>
+    </select>
+  </section>
+
+  <!-- Button -->
+  <section style="margin-bottom: 20px;">
+    <button id="validateButton"
+            style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: none; font-size: 16px; color: white; background-color: #006680; cursor: pointer;">
+      Prüfen
+    </button>
+  </section>
+
+  <!-- Feedback -->
+  <section>
+    <p id="feedbackMessage" style="font-size: 16px; margin-top: 10px;"></p>
+  </section>
+
+  <!-- History -->
+  <section class="history-section" style="margin-top: 20px;">
+    <h2 style="text-align: center;">History</h2>
+    <ul id="historyList" style="list-style: none; padding: 0;"></ul>
+  </section>
+</main>
+
+<footer style="background-color: #006680; color: white; text-align: center; padding: 10px;">
+  <p style="margin: 0;">(c) 2024 Validation Tool</p>
+</footer>
+
+<script src="js/index.js"></script>
+</body>
+</html>
