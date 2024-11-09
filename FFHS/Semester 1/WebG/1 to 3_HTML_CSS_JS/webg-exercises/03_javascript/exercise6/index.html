@@ -12,7 +12,27 @@
 
 <p style="display: none">
 
+    Aufgabe 6: Eingabefeld zur Berechnung des BMI mit HTML und JavaScript
+    Dauer: 15 Minuten
+    Ziel: Üben des Zugriffs auf Benutzer-Eingaben und der Berechnung sowie Ausgabe in HTML.
+    Erstelle eine Datei aufgabe6.html und füge das grundlegende HTML-Grundgerüst ein.
+    Erstelle ein Formular mit zwei Eingabefeldern: eines für das Gewicht und eines für die Größe.
+    Füge einen Button hinzu, der die BMI-Berechnung auslöst.
+    Schreibe JavaScript, das die Werte aus den Eingabefeldern liest, den BMI berechnet und das Ergebnis in einer div-Ausgabe anzeigt.
+
 </p>
+
+<main>
+    <h1>Berechnung BMI</h1>
+    <label for="inputweight">Gewicht (kg):</label>
+        <input type="number" id="inputweight" name="weight" placeholder="Enter weight"/>
+    </label>
+    <label for="inputheight">Grösse (cm):</label>
+    <input type="number" id="inputheight" name="height" placeholder="Enter height" min="10"/>
+    </label>
+    <button type="button" id="submitbutton">BMI berechnen</button>
+    <div id="message"></div>
+</main>
 
 
 
