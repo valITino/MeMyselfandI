@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Quote Generator</h1>
+    <p id="quote">Click the button to see a random quote!</p>
+    <button id="generate-quote">Generate Quote</button>
+    <script>
+        document.getElementById("generate-quote").addEventListener("click", async function () {
+        	
+          const quotearray = [
+          "The only limit to our realization of tomorrow is our doubts of today.", 
+          "Life is 10% what happens to us and 90% how we react to it.", 
+          "In the middle of every difficulty lies opportunity.", 
+          "Success is not final, failure is not fatal: It is the courage to continue that counts.", 
+          "Do what you can with all you have, wherever you are."
+          ];
+          const randomIndex = Math.floor(Math.random()*quotearray.length);
+          document.getElementById("quote").textContent = quotearray[randomIndex];
+          
+        
+        });
+    </script>
+</body>
+</html>
