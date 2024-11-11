@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        /* Reset body styles for centering */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+            height: 100vh; /* Full height of the viewport */
+            font-family: Arial, sans-serif; /* Default font */
+        }
+
+        input, label {
+            display: block; /* Place each label and input on a new line */
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculator</h1>
+        <form>
+            <fieldset>
+                <legend>Calculation</legend>
+                <label for="First Number">First Number:</label>
+                <input type="number" id="inputone" placeholder="Enter Number" required/>
+                <label for="Second Number">Second Number:</label>
+                <input type="number" id="inputtwo" placeholder="Enter Number" required/><br>
+                <div id="calculations">
+                  <button type="button" data-operation="add">+</button>
+                  <button type="button" data-operation="sub">-</button>
+                  <button type="button" data-operation="mul">*</button>
+                  <button type="button" data-operation="div">/</button>
+                </div>
+                <button type="button" id="reset">Reset</button>
+            </fieldset>
+            <fieldset>
+            <legend>Result</legend>
+                <p id="result"></p>
+            </fieldset>
+        </form>
+    </main>
+<script>
+document.querySelector("#calculations").addEventListener("click", function(e) {
+
+const resetbutton = document.getElementById("reset");
+
+const input1 = parseFloat(document.getElementById("inputone").value);
+const input2 = parseFloat(document.getElementById("inputtwo").value);
+const operation = e.target.dataset.operation;
+
+let result;
+
+if (isNaN(input1) || isNaN(input2)) {
+    alert("Please enter valid numbers!");
+    return;
+}
+
+switch(operation) {
+
+case "add":
+result = input1 + input2;
+break;
+
+case "sub":
+result = input1 - input2;
+break;
+
+case "mul":
+result = input1 * input2;
+break;
+
+case "div":
+if (input2 === 0) {
+document.getElementById("result").textContent = "Division by 0 is undefined!";
+return;
+} else {
+result = input1 / input2;
+}
+break;
+
+default:
+result = "Ungültig!";
+
+}
+document.getElementById("inputone").value = "";
+document.getElementById("inputtwo").value = "";
+document.getElementById("result").textContent = result;
+resetbutton.addEventListener("click", function() {
+
+	document.getElementById("result").remove();
+});
+});
+</script>
+</body>
+</html>
