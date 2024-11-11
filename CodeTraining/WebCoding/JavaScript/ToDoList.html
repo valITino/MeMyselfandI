@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+        button {
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <label for="task-input">What would you like to do today?</label><br>
+    <input type="text" id="task-input" placeholder="Enter a task">
+    <button id="add-task">Add Task</button>
+    <ul id="task-list"></ul>
+    <script>
+        document.getElementById("add-task").addEventListener("click", function () {
+        	
+        	const taskInput = document.getElementById("task-input");
+					const taskValue = taskInput.value;
+          
+          const tasklist = document.getElementById("task-list");
+          const newTask = document.createElement("li");
+          tasklist.appendChild(newTask);
+          newTask.textContent = taskValue;
+          
+          const deletebutton = document.createElement("button");
+          deletebutton.textContent = "Delete";
+          newTask.appendChild(deletebutton);
+          deletebutton.addEventListener("click", function () {
+          
+          const deletebutton = document.getElementById("deleteButton");
+          newTask.remove();
+          });
+         	taskInput.value = "";
+          });
+
+    </script>
+</body>
+</html>
