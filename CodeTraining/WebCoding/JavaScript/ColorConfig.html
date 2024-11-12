@@ -70,6 +70,35 @@ sliders.forEach(slider => {
     });
 });
 
+const colorCodes = document.getElementsByClassName("color-codes")[0];
+const createButton = document.createElement("button");
+createButton.id = "randombutton";
+colorCodes.appendChild(createButton);
+createButton.textContent = "Generate random color";
+
+// Generate Random Color
+document.getElementById("randombutton").addEventListener("click", function () {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    const rgbColor = `rgb(${r}, ${g}, ${b})`;
+
+    // Update the color preview
+    document.getElementById("color-preview").style.backgroundColor = rgbColor;
+
+    // Update the RGB and Hex codes
+    document.getElementById("rgb-code").textContent = `RGB: ${rgbColor}`;
+    document.getElementById("hex-code").textContent = `Hex: ${rgbToHex(r, g, b)}`;
+
+    // Reset all sliders to 0
+    document.getElementById("red").value = 0;
+    document.getElementById("green").value = 0;
+    document.getElementById("blue").value = 0;
+
+});
+
+
 // Function to convert RGB to Hex
 function rgbToHex(r, g, b) {
     r = parseInt(r);
