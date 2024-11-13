@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100wh;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Buttons Section */
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.choices button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choices button:hover {
+    background-color: #ddd;
+}
+
+.choices button:active {
+    background-color: #bbb;
+}
+
+/* Result Section */
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .choices {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .choices button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .result {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Let's play:</h1>
+    <div id="choices" class="choices">
+        <button id="rock" data-operation="rocking">Rock</button>
+        <button id="paper" data-operation="papering">Paper</button>
+        <button id="scissors" data-operation="scissoring">Scissors</button>
+    </div>
+    <div id="result" class="result">
+        <p id="user-choice">Your Choice: </p>
+        <p id="computer-choice">Computer's Choice: </p>
+        <p id="winner">Result: </p>
+    </div>
+    <script>
+        document.querySelector("#choices").addEventListener("click", function(e) {
+        
+        const rockbutton = document.getElementById("rock");
+        const paperbutton = document.getElementById("paper");
+        const scissorsbutton = document.getElementById("scissors");
+        
+        const operation = e.target.dataset.operation;
+        
+        const userChoice = document.getElementById("user-choice");
+        const computerChoice = document.getElementById("computer-choice");
+        const winner = document.getElementById("winner");
+        
+        const choices = ["Rock", "Paper", "Scissors"];
+        const randomIndex = Math.floor(Math.random()*choices.length);
+        const pcChoice = choices[randomIndex];
+        
+        switch(operation) {
+        
+        case "rocking":
+        userChoice.textContent = "You chose: Rock";
+        computerChoice.textContent = "PC chose: " + pcChoice;
+        break;
+        
+        case "papering":
+        userChoice.textContent = "You chose: Paper";
+        computerChoice.textContent = "PC chose: " + pcChoice;
+        break;
+        
+        case "scissoring":
+        userChoice.textContent = "You chose: Scissor";
+        computerChoice.textContent = "PC chose: " + pcChoice;
+        break;
+        
+        default:
+        
+        }
+        const userChoiceText = userChoice.textContent.split(": ")[1]; // Extract user's choice text
+        if (userChoiceText === pcChoice) {
+            winner.textContent = "Result: It's a draw!";
+        } else if (
+            (userChoiceText === "Rock" && pcChoice === "Scissors") ||
+            (userChoiceText === "Paper" && pcChoice === "Rock") ||
+            (userChoiceText === "Scissors" && pcChoice === "Paper")
+        ) {
+            winner.textContent = "Result: You win!";
+        } else {
+            winner.textContent = "Result: You lose!";
+        }
+    });
+    </script>
+</body>
+</html>
