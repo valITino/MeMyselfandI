@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+        h1 {
+            text-align: center;
+            color: coral;
+            font: bolder 3em 'Courier New', Courier, monospace;
+        }
+        h2 {
+            text-align: center;
+            color: navy;
+            font: bolder 2em 'Courier New', Courier, monospace;
+        }
+        #yourguess {
+            background-color: #ffe6e6;
+        }
+        button {
+            background-color: lightcyan;
+            margin: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            border-style: groove;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: aquamarine;
+            box-shadow: 5px 5px 10px #888888;
+            transform: scale(1.1);
+        }
+        button:active {
+            background-color: lightsalmon;
+        }
+        #result {
+            font: bolder 2em 'Courier New', Courier, monospace;
+            border: 1px solid black;
+            padding: 10px;
+            width: 80%;
+            text-align: center;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (max-width: 800px) {
+            body {
+                flex-direction: column;
+                font-size: 1rem;
+            }
+            button {
+                width: 80%;
+                font-size: 0.9rem;
+            }
+            h1, h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Guess The Number!</h1>
+<h2>Between 0 and 100:</h2>
+<input type="number" id="yourguess" placeholder="Enter your Guess" required><br>
+<div id="buttons">
+    <button id="go" data-operation="generate">GO!</button>
+    <button id="randomguess" data-operation="randomize">Random Guess</button>
+</div>
+<p id="result"></p>
+<p id="followup"></p>
+
+<script>
+    let randomNumber1 = Math.floor(Math.random() * 101); // Persistent random number
+
+    document.querySelector("#buttons").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const yourGuess = parseInt(document.getElementById("yourguess").value);
+        const result = document.getElementById("result");
+
+        const operations = e.target.dataset.operation;
+
+        // Clear previous result
+        result.innerHTML = "";
+
+        switch (operations) {
+            case "generate":
+                // Validate input
+                if (isNaN(yourGuess) || yourGuess < 0 || yourGuess > 100) {
+                    alert("Please enter a number between 0 and 100");
+                    return;
+                }
+
+                // Compare input to random number
+                if (yourGuess === randomNumber1) {
+                    result.innerHTML = "Jackpot!";
+                } else if (yourGuess < randomNumber1) {
+                    result.innerHTML = "Too Low!";
+                } else {
+                    result.innerHTML = "Too High!";
+                }
+
+                // Display user and PC guesses
+                const newLineUser = document.createElement("p");
+                const newLinePC = document.createElement("p");
+                newLineUser.innerHTML = "Your Guess: " + yourGuess;
+                newLinePC.innerHTML = "PC's number: " + randomNumber1;
+                result.appendChild(newLineUser);
+                result.appendChild(newLinePC);
+                break;
+
+            case "randomize":
+                // Generate random guess and update input
+                const randomGuess = Math.floor(Math.random() * 101);
+                document.getElementById("yourguess").value = randomGuess;
+
+                // Compare random guess to random number
+                if (randomGuess === randomNumber1) {
+                    result.innerHTML = "Jackpot!";
+                } else if (randomGuess < randomNumber1) {
+                    result.innerHTML = "Too Low!";
+                } else {
+                    result.innerHTML = "Too High!";
+                }
+
+                // Display user and PC guesses
+                const newLineUserRandom = document.createElement("p");
+                const newLinePCRandom = document.createElement("p");
+                newLineUserRandom.innerHTML = "Your Guess: " + randomGuess;
+                newLinePCRandom.innerHTML = "PC's number: " + randomNumber1;
+                result.appendChild(newLineUserRandom);
+                result.appendChild(newLinePCRandom);
+                break;
+        }
+    });
+</script>
+</body>
+</html>
