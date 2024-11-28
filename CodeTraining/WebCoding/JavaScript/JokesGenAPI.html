@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokesGenAPI</title>
+    <style>
+      @media (min-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+
+      }
+      body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        min-width: 100vw;
+        font-family: "Calibri Light", sans-serif;
+      }
+      h1 {
+        text-align: center;
+        margin: 10px;
+        font-weight: bold;
+        border-style: outset;
+        border-radius: 10px;
+        border-width: medium;
+        padding: 10px;
+      }
+      h2 {
+        text-align: center;
+        font-weight: normal;
+      }
+      button {
+        margin: 10px;
+        font-weight: bold;
+        background-color: yellowgreen;
+        border-sytle: solid;
+        border-radius: 10px;
+        border-color: springgreen;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-size: 20px;
+        padding: 10px;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: lightyellow;
+      }
+      button:active {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: greenyellow;
+      }
+      #joke {
+        text-align: center;
+        margin: 10px;
+        font-style: oblique;
+        font-weight: bolder;
+        font-size: 25px;
+        text-underline: lawngreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+
+    </style>
+</head>
+<body>
+  <h1>Joke of today:</h1>
+  <h2>Click the button below to generate one!</h2>
+  <div id="buttons">
+    <button onclick="generateJoke()">Get a joke!</button>
+  </div>
+  <div id="joke">
+    <p id="jokeText"></p>
+  </div>
+<script>
+  function generateJoke() {
+    let jokeText = document.getElementById("jokeText");
+
+    jokeText.textContent = "Loading a funny joke only for you...";
+
+    const xhr = new XMLHttpRequest();
+
+    const url = "https://official-joke-api.appspot.com/jokes/random";
+
+    xhr.open("GET", url, true);
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const joke = JSON.parse(xhr.responseText);
+        jokeText.textContent = `${joke.setup}`;
+        const followUpButton = document.createElement("button");
+        jokeText.appendChild(followUpButton);
+        followUpButton.textContent = "What?";
+        followUpButton.addEventListener("click", () => {
+          jokeText.textContent = `${joke.punchline}`;
+        })
+      } else {
+        jokeText.textContent = "Oops! Could not fetch a joke. Try it again maybe?";
+      }
+    }
+    xhr.send();
+  }
+</script>
+</body>
+</html>
